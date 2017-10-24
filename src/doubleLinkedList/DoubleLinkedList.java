@@ -37,13 +37,19 @@ public class DoubleLinkedList<T> {
 	}
 
 	private node<T> Search(T value, node<T> start, node<T> end) {
-		if (start.getNext() == null) {
+		if (start.getNext() == null || end.getBack() == null) {
 			return null;
 		} else if (start.getNext().getValue().equals(value)) {
 			return start.getNext();
 		} else if (end.getBack().getValue().equals(value)) {
 			return end.getBack();
+		}else if((start.getNext().equals(end)) || (start.equals(end))) {
+			return null;
 		}
 		return Search(value, start.getNext(), end.getBack());
+	}
+	
+	public void Remove(T value) {
+		
 	}
 }

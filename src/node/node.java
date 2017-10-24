@@ -10,6 +10,7 @@ package node;
 
 import java.util.Iterator;
 
+
 public class node<T> {
 	private T value=null;
 	private node<T> next=null;
@@ -56,6 +57,15 @@ public class node<T> {
 	public void setIndex(node<T> indice) {
 		// TODO Auto-generated method stub
 		
+	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return super.equals(obj);
+	}
+	@Override
+	public boolean compareTo(Object obj) {
+		return super.compareTo(obj);
 	}
 	
 }
